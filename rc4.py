@@ -64,11 +64,3 @@ def RC4(key, text):
         decode(key, text)
     else:
         encode(key, text)
-
-def call_RC4():
-        key = input("Enter a secret key: ")
-        text = input("Text to encrypt or hex to decrypt: ")
-        RC4(key, text)
-
-
-call_RC4()
