@@ -1,6 +1,9 @@
 # Python cache folder
 __pycache__
 
+#PyCharm folder
+.idea
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
