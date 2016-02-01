@@ -1,3 +1,8 @@
+# Please be aware that while functional, this script is intended for educational
+# use as a visual aid, and is not designed for further implementation.
+
+
+# This function is a direct adoption of the one used on http//www.wepkey.com
 def wepkey64(val):
     pseed = [0, 0, 0, 0]
     randNumber = 0
@@ -18,8 +23,8 @@ def wepkey64(val):
             randNumber = (randNumber * 0x343fd + 0x269ec3) & 0xffffffff
             tmp = (randNumber >> 16) & 0xff
             s = str(hex(tmp)[2:])  # Remove the \0x: 5d
-            s = s.zfill(2)
-            k64[i] += s.upper()
+            s = s.zfill(2)  # Ensure leading 0: '6' vs '06'
+            k64[i] += s.upper()  # Upper case letters look nicer
             j += 1
         i += 1
 

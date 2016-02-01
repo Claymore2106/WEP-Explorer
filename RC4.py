@@ -43,7 +43,7 @@ def encode(key, text):
         newtext.append(s)
     for i in newtext:
         encrypted += str(i)
-    print(encrypted)
+    return encrypted
 
 
 def decode(key, text):
@@ -56,11 +56,11 @@ def decode(key, text):
         a = n ^ next(keystream)  # Get the unencrypted numerical value from table
         c = chr(a)  # Get the ASCII value for that number
         decrypted += c
-    print(decrypted)
+    return decrypted
 
 
 def RC4(key, text):
     if all(c in string.hexdigits for c in text):
-        decode(key, text)
+        return decode(key, text)
     else:
-        encode(key, text)
+        return encode(key, text)
